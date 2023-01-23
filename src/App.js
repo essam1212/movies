@@ -22,7 +22,7 @@ export function App() {
 
       <Navpar/>
       <MediaContextProvieder>
-      <Router basename='/home'>
+      <Router basename='home'>
 
       <Routes>
         <Route path='/' element={<Home />} />
