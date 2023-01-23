@@ -1,5 +1,5 @@
 import React from 'react'
-import about from '../../../public/img/unnamed.jpg'
+import about from '../../img/unnamed.jpg'
 export default function About() {
   return (
     <div className=" container">
