@@ -24,14 +24,12 @@ export function App() {
       <Navpar />
 
       <MediaContextProvieder>
-      <Router basename="/trending">
 
       <ScrollToTop />
 
 
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='trending' element={<Home />} />
             <Route path='home' element={<Home />} />
             <Route path='about' element={<About />} />
             <Route path='movis' element={<Movis />} />
@@ -53,7 +51,6 @@ export function App() {
 
 
           </Routes>
-          </Router>
       </MediaContextProvieder>
     </div>
 
