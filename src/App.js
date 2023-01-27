@@ -1,5 +1,4 @@
-import BrowserRouter from "react-router-dom"
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import { BrowserRouter as Router,Route, Routes, useNavigate } from 'react-router-dom'
 import About from './componant/About/About'
 import Home from './componant/Home/Home'
 import Navpar from './componant/Navpar/Navpar'
@@ -19,6 +18,7 @@ export function App() {
   let navigate = useNavigate()
 
   return <>
+    <Router basename="/trending">
 
     <div className=' container-fluid'>
 
@@ -54,10 +54,11 @@ export function App() {
           </Routes>
           
       </MediaContextProvieder>
+
     </div>
 
 
-
+</Router>
   </>
 }
 
