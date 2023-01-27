@@ -17,7 +17,6 @@ export function App() {
   let navigate = useNavigate()
 
   return <>
-        <Router basename='trending'>
 
     <div className=' container-fluid'>
 
@@ -50,7 +49,6 @@ export function App() {
       </MediaContextProvieder>
     </div>
 
-    </Router>
 
 
   </>
