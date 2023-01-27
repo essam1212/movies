@@ -1,4 +1,4 @@
-import { BrowserRouter as Router,Route, Routes, useNavigate } from 'react-router-dom'
+import {  BrowserRouter as Router,  Route, Routes } from 'react-router-dom'
 import About from './componant/About/About'
 import Home from './componant/Home/Home'
 import Navpar from './componant/Navpar/Navpar'
@@ -15,11 +15,8 @@ import { MediaContextProvieder } from './componant/context/context'
 import ScrollToTop from './componant/ScrollToTop'
 
 export function App() {
-  let navigate = useNavigate()
 
   return <>
-    <Router basename="/trending">
-
     <div className=' container-fluid'>
 
       <Navpar />
@@ -28,8 +25,7 @@ export function App() {
 
       <ScrollToTop />
 
-
-          <Routes>
+      <Routes>
             <Route path='/trending' element={<Home />} />
             <Route path='home' element={<Home />} />
             <Route path='about' element={<About />} />
@@ -58,7 +54,7 @@ export function App() {
     </div>
 
 
-</Router>
+
   </>
 }
 
