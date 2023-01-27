@@ -27,9 +27,11 @@ export function App() {
 
       <ScrollToTop />
 
+      <Router basename="/trending">
 
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='trending' element={<Home />} />
             <Route path='home' element={<Home />} />
             <Route path='about' element={<About />} />
             <Route path='movis' element={<Movis />} />
@@ -51,6 +53,7 @@ export function App() {
 
 
           </Routes>
+          </Router>
       </MediaContextProvieder>
     </div>
 
