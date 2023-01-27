@@ -1,4 +1,4 @@
-import { BrowserRouter as Router , Route, Routes, useNavigate } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom'
 import About from './componant/About/About'
 import Home from './componant/Home/Home'
 import Navpar from './componant/Navpar/Navpar'
@@ -20,36 +20,38 @@ export function App() {
 
     <div className=' container-fluid'>
 
-      <Navpar/>
+      <Navpar />
       <MediaContextProvieder>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='trending' element={<Home />} />
-        <Route path='home' element={ <Home />} />
-        <Route path='about' element={ <About /> } />
-        <Route path='movis' element={ <Movis /> } />
-        <Route path='tv' element={ <Tv /> } />
-        <Route path='people' element={ <People /> } />
-        <Route path='network' element={ <Network /> } />
+        <Router basename='trending'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='trending' element={<Home />} />
+            <Route path='home' element={<Home />} />
+            <Route path='about' element={<About />} />
+            <Route path='movis' element={<Movis />} />
+            <Route path='tv' element={<Tv />} />
+            <Route path='people' element={<People />} />
+            <Route path='network' element={<Network />} />
 
-        <Route path='moviedetails' element={<Details />}>
-        <Route path=':id' element={<Details />} />
-        </Route>
-        <Route path='tvdetails' element={<TvDetails />}>
-        <Route path=':id' element={<TvDetails />} />
-        </Route>
-        <Route path='peopleDetails' element={<PeopleDetails />}>
-        <Route path=':id' element={<PeopleDetails />} />
-        </Route>
+            <Route path='moviedetails' element={<Details />}>
+              <Route path=':id' element={<Details />} />
+            </Route>
+            <Route path='tvdetails' element={<TvDetails />}>
+              <Route path=':id' element={<TvDetails />} />
+            </Route>
+            <Route path='peopleDetails' element={<PeopleDetails />}>
+              <Route path=':id' element={<PeopleDetails />} />
+            </Route>
 
-        <Route path='*' element={<Notfound />} />
+            <Route path='*' element={<Notfound />} />
 
 
-      </Routes>
+          </Routes>
+        </Router>
       </MediaContextProvieder>
     </div>
 
-    
+
 
   </>
 }
