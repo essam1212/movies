@@ -12,6 +12,7 @@ import Details from './componant/Movie detailse/Details'
 import TvDetails from './componant/tvDetails/TvDetails'
 import PeopleDetails from './componant/peopleDetails/PeopleDetails'
 import { MediaContextProvieder } from './componant/context/context'
+import ScrollToTop from './componant/ScrollToTop'
 
 export function App() {
   let navigate = useNavigate()
@@ -21,7 +22,13 @@ export function App() {
     <div className=' container-fluid'>
 
       <Navpar />
+
       <MediaContextProvieder>
+      <Router basename="/trending">
+
+      <ScrollToTop />
+
+
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='trending' element={<Home />} />
@@ -46,6 +53,7 @@ export function App() {
 
 
           </Routes>
+          </Router>
       </MediaContextProvieder>
     </div>
 
