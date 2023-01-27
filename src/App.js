@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom'
+import { BrowserRouter , Route, Routes, useNavigate } from 'react-router-dom'
 import About from './componant/About/About'
 import Home from './componant/Home/Home'
 import Navpar from './componant/Navpar/Navpar'
@@ -27,7 +27,7 @@ export function App() {
 
       <ScrollToTop />
 
-      <Router basename="/trending">
+      <BrowserRouter basename="/trending">
 
           <Routes>
             <Route path='/' element={<Home />} />
@@ -53,7 +53,7 @@ export function App() {
 
 
           </Routes>
-          </Router>
+          </BrowserRouter>
       </MediaContextProvieder>
     </div>
 
