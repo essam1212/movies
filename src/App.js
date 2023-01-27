@@ -17,12 +17,12 @@ export function App() {
   let navigate = useNavigate()
 
   return <>
+        <Router basename='trending'>
 
     <div className=' container-fluid'>
 
       <Navpar />
       <MediaContextProvieder>
-        <Router basename='trending'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='trending' element={<Home />} />
@@ -47,10 +47,10 @@ export function App() {
 
 
           </Routes>
-        </Router>
       </MediaContextProvieder>
     </div>
 
+    </Router>
 
 
   </>

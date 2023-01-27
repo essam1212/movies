@@ -21,7 +21,7 @@ export default function Navpar(props) {
                   >Home</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="About"
+                  <Link className="nav-link" to="about"
                    onClick={() => updateExpanded(false)}
                   >about</Link>
                 </li>
