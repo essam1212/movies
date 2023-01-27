@@ -30,8 +30,7 @@ export function App() {
       <BrowserRouter basename="/trending">
 
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='trending' element={<Home />} />
+            <Route path='/trending' element={<Home />} />
             <Route path='home' element={<Home />} />
             <Route path='about' element={<About />} />
             <Route path='movis' element={<Movis />} />
