@@ -27,7 +27,7 @@ movis? <div className='container' >
 
 
   {movis.map((movie,index) =>
-    <div key={index} className="col-lg-2  col-md-4 col-6  ">
+    <div key={index} className="col-lg-2  col-md-6 col-12  ">
       <div className="content  position-relative">
        <Link to={`/moviedetails/${movie.id}`}><img src={prefxImg + movie.poster_path} alt="" className='w-100' />
         <h3 className='mb-3'>{movie.title}</h3>
@@ -59,7 +59,7 @@ movis? <div className='container' >
 
 
       {tv.map((tv,index) =>
-        <div key={index} className="col-lg-2  col-md-4 col-6  ">
+        <div key={index} className="col-lg-2  col-md-6 col-12 ">
           <div className="content position-relative ">
           <Link to={`/tvdetails/${tv.id}`}> <img src={prefxImg + tv.poster_path} alt="" className='w-100' />
             <h3 className='mb-3'>{tv.name}</h3>
@@ -89,7 +89,7 @@ movis? <div className='container' >
 
 
     {people.map((people,index) =>
-      <div key={index} className="col-lg-2  col-md-4 col-6  ">
+      <div key={index} className="col-lg-2  col-md-6 col-12 ">
         <div className="content position-relative ">
         <Link to={`/peopleDetails/${people.id}`}>  <img src={prefxImg + people.profile_path} alt="" className='w-100 ' />
           <h3 className='mb-3'>{people.name}</h3>

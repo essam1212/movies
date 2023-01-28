@@ -12,7 +12,6 @@ import Details from './componant/Movie detailse/Details'
 import TvDetails from './componant/tvDetails/TvDetails'
 import PeopleDetails from './componant/peopleDetails/PeopleDetails'
 import { MediaContextProvieder } from './componant/context/context'
-import ScrollToTop from './componant/ScrollToTop'
 
 export function App() {
 
@@ -23,7 +22,6 @@ export function App() {
 
       <MediaContextProvieder>
 
-      <ScrollToTop />
 
       <Routes>
             <Route path='/' element={<Home />} />

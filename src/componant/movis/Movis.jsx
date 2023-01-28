@@ -21,7 +21,7 @@ export default function Movis() {
     <div className=' mt-5 pt-5 container' >
       <div className='row '>
       {movis.map((movie,index) =>
-        <div key={index} className="col-lg-2  col-md-4 col-6 ">
+        <div key={index} className="col-lg-2  col-md-6 col-12 ">
           <div className="content  position-relative">
            <Link to={`/moviedetails/${movie.id}`}><img src={prefxImg + movie.poster_path} alt="" className='w-100' />
             <h3 className='mb-5'>{movie.title}</h3>
